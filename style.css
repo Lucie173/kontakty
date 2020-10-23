@@ -9,35 +9,83 @@ body {
 
 /* ---------------------------------------------------- */
 
-
-.osoba {
-	width: 200px;
-	border: 1px solid grey;
-	border-radius: 5px;
-	height: auto;
-	text-align: center;
-	padding: 20px;
-	margin-bottom: 10px;
-	margin-left: 20px;
-}
-
-.picture {
-	border-radius: 50%;
-	max-width: 100%;
-}
-
 h1 {
 	text-align: center;
 }
 
 
-@media screen and (min-width: 540px) {
+
+.osoba {
+	padding: 30px;
+	border: 1px solid grey;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 255, 255, 0.15);
+	
+
+}
+
+.popis h2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+p {
+	margin-bottom: 0;
+	text-align: left;
+}
+
+
+/*mobil*/
+
+.osoba {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.picture {
+	border-radius: 50%;
+}
+.foto {
+	padding-right: 20px;
+}
+
+/*tablet*/
+
+@media (min-width: 600px) {
 	.tym {
 		display: flex;
 		flex-wrap: wrap;
-	
+		justify-content: space-between;
 	}
+
+	.osoba {
+		width: calc((100% - 20px)/2);
+		display: flex;
+		text-align: left;
+	}
+
 	.foto {
-		width: calc(100%/3);
+		padding-top: 20px;
 	}
+}
+
+
+/*PC*/
+
+@media (min-width: 960px) {
+	.tym {
+		display: flex;
+		flex-wrap: nowrap;
+		;
+	}
+
+	.osoba {
+		width: calc(100%/4);
+		display: block;
+		text-align: center;
+		margin: 10px;
+	}
+
+	
 }
